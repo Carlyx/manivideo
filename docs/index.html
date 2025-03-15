@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="VAPA: Realistic Video-based Human Avatar by Personalized Adaptation of Video Diffusion Model">
-  <meta property="og:title" content="VAPA: Realistic Video-based Human Avatar by Personalized Adaptation of Video Diffusion Model"/>
-  <meta property="og:description" content="VAPA: Realistic Video-based Human Avatar by Personalized Adaptation of Video Diffusion Model"/>
-  <meta property="og:url" content="https://carlyx.github.io/DPE/"/>
+  <meta name="description" content="ManiVideo: Generating Hand-Object Manipulation Video with Dexterous and Generalizable Grasping">
+  <meta property="og:title" content="ManiVideo: Generating Hand-Object Manipulation Video with Dexterous and Generalizable Grasping"/>
+  <meta property="og:description" content="ManiVideo: Generating Hand-Object Manipulation Video with Dexterous and Generalizable Grasping"/>
+  <meta property="og:url" content="https://carlyx.github.io/manivideo/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/carousel1.jpg" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="VAPA: Realistic Video-based Human Avatar by Personalized Adaptation of Video Diffusion Model">
-  <meta name="twitter:description" content="VAPA: Realistic Video-based Human Avatar by Personalized Adaptation of Video Diffusion Model">
+  <meta name="twitter:title" content="ManiVideo: Generating Hand-Object Manipulation Video with Dexterous and Generalizable Grasping">
+  <meta name="twitter:description" content="ManiVideo: Generating Hand-Object Manipulation Video with Dexterous and Generalizable Grasping">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/carousel1.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -53,7 +53,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h3 class="title is-1 publication-title">
-              VAPA: Realistic Video-based Human Avatar by Personalized Adaptation of Video Diffusion Model
+                ManiVideo: Generating Hand-Object Manipulation Video with Dexterous and Generalizable Grasping
             </h3>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -64,17 +64,17 @@
                 <a href="https://dsaurus.github.io/saurus/" target="_blank">Ruizhi Shao</a><sup>1</sup>
               </span>
               <span class="author-block">
-                <a href="https://suzhaoqi.github.io/" target="_blank">Zhaoqi Su</a><sup>1</sup>
+                <a href="" target="_blank">Jiajun Zhang</a><sup>2</sup>
               </span>
               <span class="author-block">
-                <a href="https://zhangyux15.github.io/" target="_blank">Yuxiang Zhang</a><sup>1</sup>
+                <a href="" target="_blank">Hanzhang Tu</a><sup>1</sup>
               </span>
               <span class="author-block">
-                <a href="" target="_blank">Xiao Zhou</a><sup>1</sup>
+                <a href="" target="_blank">Yun Liu</a><sup>1</sup>
               </span>
                   <!-- <br> -->
               <span class="author-block">
-                <a href="" target="_blank">Hongjiang Xiao</a><sup>2</sup>
+                <a href="" target="_blank">Boyao Zhou</a><sup>1</sup>
               </span>
               <span class="author-block">
                 <a href="https://hongwenzhang.github.io/" target="_blank">Hongwen Zhang</a><sup>3</sup>
@@ -87,7 +87,7 @@
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
                       <sup>1</sup> Tsinghua University &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <sup>2</sup> Communication University of China &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <sup>2</sup> Beijing University of Posts and Telecommunications &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       <sup>3</sup> Beijing Normal University
                       <!-- <br>CVPR 2023</span> -->
                   </div>
@@ -95,7 +95,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="" target="_blank"
+                        <a href="https://arxiv.org/abs/2412.16212" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -106,7 +106,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="" target="_blank"
+                    <a href="https://github.com/Carlyx/manivideo" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -145,14 +145,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this paper, we propose VAPA, a method to create a realistic video-based human avatar from a single video.
-            The key idea of VAPA is to integrate 3D human avatar with a large pre-trained video model such as video diffusion model (VDM) and adapt it to a given video.
-            By representing the avatar via a large video model, our solution can handle the long-standing jitter issues more easily while leveraging general human priors to improve generalization.
-            Meanwhile, the personalized adaptation enables our model to preserve fine-grained details as much as possible in the given video.
-            To further enhance the ability of VDM to capture motion-related details, we introduce a 3D latent semantic avatar representation and a motion-guide attention that incorporates human semantic information in 4D space,
-            such that it can enhance the dynamic consistency between motions and appearances.
-            Moreover, to better preserve the facial expression and identity, we also introduce an expression-aware face enhancement module with progressive fusion method to achieve fine-grained control of faces.
-            Evaluations demonstrate our method can generate human videos with arbitrary length that exhibit coherence, realism and accuracy, while handling challenging motions in the wild.
+            In this paper, we introduce ManiVideo, a novel method for generating consistent and temporally coherent bimanual hand-object manipulation videos from given motion sequences of hands and objects. The core idea of ManiVideo is the construction of a multi-layer occlusion (MLO) representation that learns 3D occlusion relationships from occlusion-free normal maps and occlusion confidence maps. By embedding the MLO structure into the UNet in two forms, the model enhances the 3D consistency of dexterous hand-object manipulation. To further achieve the generalizable grasping of objects, we integrate Objaverse, a large-scale 3D object dataset, to address the scarcity of video data, thereby facilitating the learning of extensive object consistency. Additionally, we propose an innovative training strategy that effectively integrates multiple datasets, supporting downstream tasks such as human-centric hand-object manipulation video generation. Through extensive experiments, we demonstrate that our approach not only achieves video generation with plausible hand-object interaction and generalizable objects, but also outperforms existing SOTA methods.
           </p>
         </div>
       </div>
@@ -162,175 +155,6 @@
 <!-- End paper abstract -->
 
 
-
-<section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3"><strong>Demo Video1</strong</h2>
-        <div class="video" style="display:inline">
-          <video controls="" loop="" width="95%">
-              <source src="./videos/demo1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h2 class="title is-4">
-            <div>Given a single human video for training, we can obtain a personalized human avatar. (We compressed videos due to size limitations.)</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3"><strong>Demo Video2</strong</h2>
-        <div class="video" style="display:inline">
-          <video controls="" loop="" width="95%">
-              <source src="./videos/demo3.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="video" style="display:inline">
-            <video controls="" loop="" width="95%">
-                <source src="./videos/demo4.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="video" style="display:inline">
-            <video controls="" loop="" width="95%">
-                <source src="./videos/demo5.mp4" type="video/mp4">
-            </video>
-          </div>
-        <h2 class="title is-4">
-            <div>Animation results. (We compressed videos due to size limitations.)</div>
-      </div>
-    </div>
-  </section>
-  <section class="hero">
-    <div class="is-max-desktop">
-      <div class="marquee-wrapper">
-          <div class="marquee-block">
-            <div class="marquee-inner to-left">
-              <span>
-                <div class="marquee-item" >
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <!-- Your video file here -->
-                    <source src="./videos/demo3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <source src="./videos/demo3.mp4" type="video/mp4">  
-                    </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                  <source src="./videos/demo3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item" >
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <!-- Your video file here -->
-                    <source src="./videos/demo3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <source src="./videos/demo3.mp4" type="video/mp4">  
-                    </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                  <source src="./videos/demo3.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </span>
-              <span>
-                <div class="marquee-item" >
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <!-- Your video file here -->
-                    <source src="./videos/demo4.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <source src="./videos/demo4.mp4" type="video/mp4">  
-                    </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                  <source src="./videos/demo4.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item" >
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <!-- Your video file here -->
-                    <source src="./videos/demo4.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <source src="./videos/demo4.mp4" type="video/mp4">  
-                    </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                  <source src="./videos/demo4.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </span>
-              <span>
-                <div class="marquee-item" >
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <!-- Your video file here -->
-                    <source src="./videos/demo5.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <source src="./videos/demo5.mp4" type="video/mp4">  
-                    </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                  <source src="./videos/demo5.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item" >
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <!-- Your video file here -->
-                    <source src="./videos/demo5.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                    <source src="./videos/demo5.mp4" type="video/mp4">  
-                    </video>
-                </div>
-                <div class="marquee-item">
-                  <video onloadstart="this.playbackRate = 0.75;" poster="" id="video1" autoplay muted loop playsinline height="100%">
-                  <source src="./videos/demo5.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </span>
-          </div>
-      </div>
-    </div></div></section>
-
-
-<section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3"><strong>Demo Video3</strong</h2>
-        <div class="video" style="display:inline">
-          <video controls="" loop="" width="95%">
-              <source src="./videos/demo2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h2 class="title is-4">
-            <div>Comparison with the SOTA methods. (We compressed videos due to size limitations.)</div>
-      </div>
-    </div>
-  </section>
 
   <footer class="footer">
   <div class="container">
